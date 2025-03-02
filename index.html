@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vishwa Vishwani | Homepage</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: url('images/campus-bg.webp') no-repeat center center;
+			background-size: cover;
+            font-family: "Montserrat", sans-serif;
+            color: #161718;
+		}
+		body:before {
+			content: " ";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.163) 0%, #eaecfbe0 100%);
+		}
+		.wrapper { min-height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; flex-direction: column; }
+        
+        .title { color: #a8b5bd; }
+        .title span { color: #333e76; }
+		.box { display: flex; align-items: center; justify-content: center;flex-direction: column;position: relative;width: 800px;height: 500px;overflow: hidden; }
+		.logo { position: absolute;margin: 0 auto; } .logo img { width: 100px; height: auto; }
+		.course {
+            font-family: "Oswald", sans-serif;
+            font-optical-sizing: auto;
+            position: absolute;
+            font-size: 3rem;
+            font-weight: bold;
+			text-align: center;
+        }
+		.course a { text-decoration: none; }
+        .pgdm { top: 0; left: 4%; }
+        .course.pgdm a { color: #ac370b; }
+		.pgdm:after { content: ''; width: 2px; height: 100px;color: #002855;display: block;transform: translate(-50%, -50%) rotate(45deg); }
+		.mba-right { top: 0; right: 6%; color: #ac370b; }
+        .course.mba-right a { color: #ac370b; }
+		.bba { top: 6%; left: 50%; transform: translateX(-50%); color: #ac370b;; }
+        .course.bba a { color: #013d62; }
+		.mba-left { bottom: 43%; left: 0; color: #ac370b;; }
+        .course.mba-left a { color: #33319e; }
+        .course.mba-left a span{ color: #ac370b;; }
+        .mba-bottom { bottom: 43%; right: 0; color: #ac370b;; }
+        .course.mba-bottom a { color: #33319e; }
+        .course.mba-bottom a span{ color: #ac370b;; }
+		.course span {
+            font-size: 1rem;
+            color: #ffffff;
+            display: block;
+        }
+		.program-box {
+            position: absolute;
+            background: #fff;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* border-radius: 5px; */
+        }
+        .bs-cs { bottom: 5%; left: 0; }
+        .bs-psych { bottom: 5%; right: 0; }
+		.mba-line {
+			position: absolute;
+			top: 57%;
+			left: 46%;
+			transform: translate(0%, 0%) rotate(53deg);
+		}
+		.pgdm-line {
+			position: absolute;
+			top: -55%;
+			left: 18%;
+			transform: translate(0%, 0%) rotate(306deg);
+		}
+		.bba-line {
+			position: absolute;
+			top: 19%;
+			left: 50%;
+			transform: translate(0%, 0%) rotate(0deg);
+		}
+		.mba-left-line {
+			position: absolute;
+			top: 64%;
+			left: -33%;
+			transform: translate(50%, 50%) rotate(90deg);
+		}
+		.mba-right-line {
+			position: absolute;
+			top: 64%;
+			left: 7%;
+			transform: translate(50%, 50%) rotate(90deg);
+		}
+		.bscs-line {
+			position: absolute;
+			top: 96%;
+			left: 23%;
+			transform: translate(0%, 0%) rotate(53deg);
+		}
+		.bsps-line {
+			position: absolute;
+			top: 16%;
+			left: 51%;
+			transform: translate(0%, 0%) rotate(306deg);
+		}
+
+        .path {
+            animation: draw 5s linear infinite;
+            transform-origin: center;
+        }
+        /* Alternative: Rotate the path only */
+        .rotate-path {
+            transform: rotate(90deg); /* Change angle as needed */
+            transform-origin: center;
+        }
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 96;
+            }
+        }
+        .ugc-footer { font-weight: 600; font-family: "Oswald", sans-serif;font-size: 2rem; }
+        .ugc-footer span { color: #33319e; }
+        @media (max-Width:559px) {
+            .title { font-size: 1rem; }
+            .course { font-size: 2rem; }
+            .pgdm-line, .bba-line, .mba-line, .mba-left-line, .mba-right-line, .bscs-line, .bsps-line { display: none; }
+            .box { height: 350px; }
+            .course a span { font-size: .8rem; }
+            .program-box img { max-width: 150px !important; }
+            .ugc-footer { font-size: 1.4rem; }
+        }
+	</style>
+</head>
+<body>
+	
+	<div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col text-end">
+                    <h5 class="title mb-5 mb-lg-0">Nurturing <span>Knowledge.</span><br/> Delivering <span>Values.</span></h5>
+                </div>
+            </div>
+        </div>
+		<div class="container p-2">
+			<div class="row">
+				<div class="col d-flex justify-content-center">
+					<div class="box">
+						<a class="logo" href="#"><img src="images/vv-fav.webp" /></a>
+						<div class="course pgdm"><a href="#">PGDM</a></div>
+						<div class="pgdm-line">  
+							<svg xmlns="http://www.w3.org/2000/svg" width="700" height="300" viewBox="0 0 700 300"> 
+							  <path class="path" stroke="#33319e" stroke-width="4" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="100" stroke-dasharray="2 6" stroke-dashoffset="0" fill="green" d="M0 0 L0 200">
+							</svg>
+						</div>
+						<div class="course bba"><a href="#">BBA</a></div>
+						<div class="bba-line">  
+							<svg xmlns="http://www.w3.org/2000/svg" width="380" height="95" viewBox="0 0 380 95"> 
+							  <path class="path" stroke="#33319e" stroke-width="4" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="100" stroke-dasharray="2 6" stroke-dashoffset="0" fill="green" d="M0 0 L0 200">
+							</svg>
+						</div>
+						<div class="course mba-right"><a href="#">MBA</a></div>
+						<div class="mba-line">  
+							<svg xmlns="http://www.w3.org/2000/svg" width="700" height="300" viewBox="0 0 700 300"> 
+							  <path class="path" stroke="#33319e" stroke-width="4" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="100" stroke-dasharray="2 6" stroke-dashoffset="0" fill="green" d="M0 0 L0 200">
+							</svg>
+						</div>
+						<div class="course mba-left"><a href="#">MBA <span>(Pharma Management)</span></a></div>
+                        <div class="mba-left-line">
+							<svg xmlns="http://www.w3.org/2000/svg" width="500" height="180" viewBox="0 0 500 180"> 
+							  <path class="path" stroke="#33319e" stroke-width="4" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="100" stroke-dasharray="2 6" stroke-dashoffset="0" fill="green" d="M0 0 L0 200">
+							</svg>
+						</div>
+						<div class="course mba-bottom"><a href="#">MBA <span>(Agribusiness Management)</span></a></div>
+                        <div class="mba-right-line">
+							<svg xmlns="http://www.w3.org/2000/svg" width="500" height="180" viewBox="0 0 500 180"> 
+							  <path class="path" stroke="#33319e" stroke-width="4" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="100" stroke-dasharray="2 6" stroke-dashoffset="0" fill="green" d="M0 0 L0 200">
+							</svg>
+						</div>
+
+						<div class="program-box bs-cs"><img src="images/bscs.webp" class="w-100" style="max-width: 220px;" /></div>
+						<div class="bscs-line">
+							<svg xmlns="http://www.w3.org/2000/svg" width="500" height="120" viewBox="0 0 500 120"> 
+							  <path class="path" stroke="#33319e" stroke-width="4" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="100" stroke-dasharray="2 6" stroke-dashoffset="0" fill="green" d="M0 0 L0 200">
+							</svg>
+						</div>
+        				<div class="program-box bs-psych"><img src="images/bsps.webp" class="w-100" style="max-width: 220px;" /></div>
+						<div class="bsps-line">
+							<svg xmlns="http://www.w3.org/2000/svg" width="500" height="120" viewBox="0 0 500 120"> 
+							  <path class="path" stroke="#33319e" stroke-width="4" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="100" stroke-dasharray="2 6" stroke-dashoffset="0" fill="green" d="M0 0 L0 200">
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h3 class="ugc-footer mt-3 mt-lg-0">UGC Approved <span>Autonomous</span> Institution <br/> with <span>NAAC A+</span> Grade</h3>
+                </div>
+            </div>
+        </div>
+	</div>
+
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Programs</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('images/campus-bg.webp') no-repeat center center;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            width: 80%;
+            max-width: 900px;
+        }
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+        }
+        .course {
+            position: absolute;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .pgdm { top: 20%; left: 10%; color: #E4572E; } /* PGDM */
+        .bba { top: 20%; left: 50%; transform: translateX(-50%); color: #002855; } /* BBA */
+        .mba-right { top: 20%; right: 10%; color: #E4572E; } /* MBA */
+        .mba-left { bottom: 40%; left: 10%; color: #002855; } /* MBA Pharma */
+        .mba-bottom { bottom: 40%; right: 10%; color: #002855; } /* MBA Agribusiness */
+        
+        .course span {
+            font-size: 1rem;
+            color: #E4572E;
+            display: block;
+        }
+
+        .program-box {
+            position: absolute;
+            background: #fff;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .bs-cs { bottom: 15%; left: 15%; background: #002855; color: #fff; } /* BS Computer Science */
+        .bs-psych { bottom: 15%; right: 15%; background: #002855; color: #fff; } /* BS Psychology */
+        
+        .footer-text {
+            position: absolute;
+            bottom: 5%;
+            width: 100%;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .footer-text span {
+            color: #E4572E;
+        }
+        .highlight {
+            color: #002855;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="images/vvism-logo.webp" class="logo" alt="Logo"> 
+
+        <div class="course pgdm">PGDM</div>
+        <div class="course bba">BBA</div>
+        <div class="course mba-right">MBA</div>
+        <div class="course mba-left">MBA <span>(Pharma Management)</span></div>
+        <div class="course mba-bottom">MBA <span>(Agribusiness Management)</span></div>
+
+        <div class="program-box bs-cs">BS COMPUTER SCIENCE <br> AI - ML - DATA SCIENCE</div>
+        <div class="program-box bs-psych">BS PSYCHOLOGY <br> With COMPUTER SCIENCE</div>
+
+        <div class="footer-text">
+            UGC Approved <span>Autonomous</span> Institution with <span class="highlight">NAAC A+ Grade</span>
+        </div>
+    </div>
+
+</body>
+</html> -->
