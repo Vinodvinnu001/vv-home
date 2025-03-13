@@ -29,65 +29,85 @@
 			left: 0;
 			background: -webkit-radial-gradient(top center, ellipse cover, rgb(255 255 255 / 19%) 0%, #b5bceb73 100%);
 		}
+		@font-face {
+			font-family: 'Caslon', sans-serif;
+			src: url(caslon.otf);
+		}
 		.wrapper { min-height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; flex-direction: column; }
-        .title { color: #82919b; }
-        .title span { color: #333e76; }
-		.box { display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; width: 880px; height: 470px; overflow: hidden; }
+        .header-box { max-width: 880px; }
+		.title { color: #333e76; }
+        .header-btn .btn-primary { background-color: #333e76; border-color: #333e76;border-radius: 25px; padding: 5px 18px; }
+        .header-btn .btn-primary:hover { background-color: #ff0000; border-color: #ff0000;box-shadow: 3px 3px 8px #2624248d; }
+		.box {  position: relative; width: 880px; height: 470px; overflow: hidden; }
 		
-		.logo { position: absolute;margin: 0 auto;display: flex;flex-direction: column;align-items: center;justify-content: center;max-width: 230px;text-align: center;margin-top: 100px;padding: 15px; }
+		.logo { position: absolute;margin: 0 auto;display: flex;flex-direction: column;align-items: center;justify-content: center;max-width: 300px;text-align: center;margin-top: 170px;padding: 10px; }
 		a.logo { text-decoration: none; }
-		.logo span { font-weight: 600; font-family: "Oswald", sans-serif;font-size: 1.2rem; color: #ffffff; }
+		.logo span.logo-text { font-family: 'Caslon';color: #ffffff;text-transform: uppercase; font-size: 1.2rem; }
+		.logo span { font-family: "Oswald", sans-serif; color: #ffffff; }
 		.logo img { width: 90px; height: auto;margin: 5px; }
 		.logo::before { content: ''; background: url(images/label-logo.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
-						width: 220px; height: 220px; position: absolute; z-index: -1;top: 0;left: 0;margin-left: -24px; }
+						width: 300px; height: 300px; position: absolute; z-index: -1;top: 0;left: 0;margin-left: -47px;margin-top: -35px; }
 		
 		.course { font-family: "Oswald", sans-serif; font-optical-sizing: auto; position: absolute; font-size: 3rem; font-weight: bold; text-align: center;}
 		.course a { text-decoration: none; }
 		
-        .pgdm { top: 0; left:0; }
-        .course.pgdm a { color: #ffffff;position: relative;top: 44px;left: 15px; }
-		.pgdm::before { content: ''; background: url(images/label1.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
-						width: 150px; height: 150px; position: absolute; z-index: -1;top: 0;left: 0; }
+        .mba { top: 0; left:0; }
+        .course.mba a { color: #ffffff;position: relative;top: 12px;left: 65px; }
+		.mba::before { content: ''; background: url(images/label-top.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
+						width: 220px; height: 100px; position: absolute; z-index: -1;top: 0;left: 0; }
 		
-		.mba { top: 0; right: 0; }
-		.course.mba a { color: #ffffff;position: relative;top: 44px;right: 30px; }
-		.mba::before { content: ''; background: url(images/label3.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
-						width: 150px; height: 150px; position: absolute; z-index: -1;top: 0;right: 0; }
+		.bba { top: 0; right: 0; }
+		.course.bba a { color: #ffffff;position: relative;top: 12px;right: 68px; }
+		.bba::before { content: ''; background: url(images/label-top.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
+						width: 220px; height: 100px; position: absolute; z-index: -1;top: 0;right: 0; }
 		
-		.bba { top: 0; left: 50%; transform: translateX(-50%); }
-		.course.bba a { color: #ffffff;position: relative;top: 44px;right: 2px; }
-		.bba::before { content: ''; background: url(images/label2.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
-						width: 150px; height: 150px; position: absolute; z-index: -1;top: 0;left: 0;margin-left: -35px; }
+		.pgdm { top: 0; left: 50%; transform: translateX(-50%); }
+		.course.pgdm a { color: #ffffff;position: relative;top: 12px;left: 0px; }
+		.pgdm::before { content: ''; background: url(images/label-top.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
+						width: 220px; height: 100px; position: absolute; z-index: -1;top: 0;left: 0;margin-left: -50px; }
 		
-		.bs-cs { bottom: 0; left: 0; }
-		.course.bs-cs a { color: #ffffff;position: relative;bottom: 50px;left: 13px;font-size: 1.8rem; }
-		.bs-cs::before { content: ''; background: url(images/label4.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
-						width: 280px; height: 118px; position: absolute; z-index: -1;bottom: 0;left: 0; }
+		.bs-cs { bottom: 0; left: 0; display: flex; }
+		.course.bs-cs a { color: #ffffff;position: relative;bottom: 50px;left: 13px;font-size: 1.8rem;line-height: 39px; }
+		.bs-cs::before { content: ''; background: url(images/label-left.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
+						width: 250px; height: 170px; position: absolute; z-index: -1;bottom: 0;left: 0; }
 		
-		.bs-ps { bottom: 0; right: 0; }
-		.course.bs-ps a { color: #ffffff;position: relative;bottom: 50px;right: 62px;font-size: 1.8rem; }
-		.bs-ps::before { content: ''; background: url(images/label5.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
-						width: 280px; height: 118px; position: absolute; z-index: -1;bottom: 0;right: 0; }
+		.bs-ps { bottom: 0; right: 0; display: flex; }
+		.course.bs-ps a { color: #ffffff;position: relative;bottom: 50px;right: 62px;font-size: 1.8rem;line-height: 39px; }
+		.bs-ps::before { content: ''; background: url(images/label-right.webp); display: block; background-position: center center; background-size: contain; background-repeat: no-repeat;
+						width: 250px; height: 170px; position: absolute; z-index: -1;bottom: 0;right: 0; }
 		
         .ugc-footer { font-weight: 600; font-family: "Oswald", sans-serif;font-size: 1.8rem; }
         .ugc-footer span { color: #33319e; }
+		.pulse-text {
+				-webkit-animation: pulse 400ms infinite alternate;
+						animation: pulse 400ms infinite alternate;
+			}
+			@-webkit-keyframes pulse {
+				0% { color: blue; }
+				100% { color: red; }
+			}
+			@keyframes pulse {
+				0% { color: blue; }
+				100% { color: red; }
+			}
 
         @media (max-Width:559px) {
-			.logo { margin-top: -10px;padding: 5px; }
-			.logo span { font-size: 1rem; }
-            .logo img { width: 60px; }
-			.logo::before { width: 150px; height: 150px;margin-left: -10px; }
-            .title { font-size: 1rem; }
-            .course { font-size: 2rem; }
+			.logo { margin-top: 125px;padding: 5px; }
+			.logo span { font-size: 1rem !important; }
+            .logo img { width: 70px; }
+			.logo::before { width: 247px; height: 200px;margin-left: -43px;margin-top: -30px;background: url(images/label-logo-mob.webp);background-size: contain; background-repeat: no-repeat; }
+            .title { font-size: 0.9rem; }
+			.header-btn .btn-primary { padding: 3px 12px;font-size: 0.9rem;margin-top: -10px; }
+            .course { font-size: 1.7rem; }
             .box { height: 380px; }
             .course a span { font-size: .7rem; }
             .program-box img { max-width: 150px !important; }
             .ugc-footer { font-size: 1.4rem; }
-			.pgdm::before{ width: 94px;height: 94px; } .course.pgdm a { top: 30px;left: 10px; }
-			.bba::before{ width: 94px;height: 94px;margin-left: -20px; } .course.bba a { top: 30px;left: 2px; }
-			.mba::before{ width: 94px;height: 94px; } .course.mba a { top: 30px;right: 15px; }
-			.bs-cs::before{ width: 165px; } .course.bs-cs a { font-size: 1rem;bottom: 52px; }
-			.bs-ps::before{ width: 165px; } .course.bs-ps a { font-size: 1.4rem;right: 22px;bottom: 52px; }
+			.mba::before{ width: 120px;height: 94px; } .course.mba a { top: 27px;left: 35px; }
+			.pgdm::before{ width: 120px;height: 94px; margin-left: -27px; } .course.pgdm a { top: 27px;left: 0px; }
+			.bba::before{ width: 120px;height: 94px;margin-left: -20px; } .course.bba a { top: 27px;right: 35px; }
+			.bs-cs::before{ width: 160px;height: 110px; } .course.bs-cs a { font-size: 1rem;bottom: 35px;line-height: 23px;text-transform: uppercase; }
+			.bs-ps::before{ width: 160px;height: 110px; } .course.bs-ps a { font-size: 1rem;right: 30px;bottom: 35px;line-height: 23px;text-transform: uppercase; }
         }
 	</style>
 </head>
@@ -95,32 +115,37 @@
 	
 	<div class="wrapper">
         <div class="container">
-            <div class="row">
-                <div class="col text-end">
-                    <h5 class="title mb-5 mb-lg-3">Nurturing <span>Knowledge.</span><br/> Delivering <span>Values.</span></h5>
+            <div class="row d-flex justify-content-center mb-2 mt-1">
+                <div class="col d-flex justify-content-between header-box p-2 p-lg-0">
+                    <h5 class="title mb-5 mb-lg-3 pulse-text">Admissions Open A.Y : 2025-26</h5> 
+					<div class="header-btn">
+						<a href="#" class="btn btn-primary fw-bold">Apply Now</a>
+					</div>
                 </div>
             </div>
         </div>
 		<div class="container p-2">
 			<div class="row">
 				<div class="col d-flex justify-content-center">
+
+					<a class="logo" href="#">
+						<span class="fw-bold d-none d-lg-block logo-text">Vishwa Vishwani</span>
+						<img src="images/vv-fav.webp" />
+						<span class="fw-bold d-lg-none d-block logo-text">Vishwa Vishwani</span>
+						<span class="fs-5 fw-light d-none d-lg-block">Nurturing Knowledge.<br/> Delivering Values.</span>
+					</a>
+
 					<div class="box">
 						
-						<a class="logo" href="#">
-							<span>Vishwa Vishwani</span>
-							<img src="images/vv-fav.webp" />
-							<span>School of Business</span>
-						</a>
-
-						<div class="course pgdm"><a href="https://pgdm-vishwavishwani.netlify.app/" target="_blank">PGDM</a></div>
+						<div class="course mba"><a href="https://pgdm-vishwavishwani.netlify.app/" target="_blank">MBA</a></div>
 						
-						<div class="course bba"><a href="https://vvsb-vishwavishwani.netlify.app/" target="_blank">BBA</a></div>
+						<div class="course pgdm"><a href="https://vvsb-vishwavishwani.netlify.app/" target="_blank">PGDM</a></div>
 						
-						<div class="course mba"><a href="https://vvism-vishwavishwani.netlify.app/" target="_blank">MBA</a></div>
+						<div class="course bba"><a href="https://vvism-vishwavishwani.netlify.app/" target="_blank">BBA</a></div>
 						                        
-						<div class="course bs-cs"><a href="https://vvism-vishwavishwani.netlify.app/bs_computer_science" target="_blank">BS Computer Science</a></div>
+						<div class="course bs-cs"><a href="https://vvism-vishwavishwani.netlify.app/bs_computer_science" target="_blank">BS <br/>Computer Science</a></div>
 						
-        				<div class="course bs-ps"><a href="https://vvism-vishwavishwani.netlify.app/bs_psycology" target="_blank">BS Psycology</a></div>
+        				<div class="course bs-ps"><a href="https://vvism-vishwavishwani.netlify.app/bs_psycology" target="_blank">BS <br/>Psychology</a></div>
 						
 					</div>
 				</div>
@@ -129,7 +154,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h3 class="ugc-footer mt-3 mt-lg-4">UGC Approved <span>Autonomous</span> Institution with <span>NAAC A+</span> Grade</h3>
+                    <h3 class="ugc-footer mt-3 mt-lg-3">UGC Approved <span>Autonomous</span> Institution with <span>NAAC A+</span> Grade</h3>
                 </div>
             </div>
         </div>
