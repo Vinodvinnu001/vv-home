@@ -38,7 +38,7 @@
 		.title { color: #333e76; }
         .header-btn .btn-primary { background-color: #333e76; border-color: #333e76;border-radius: 25px; padding: 5px 18px; }
         .header-btn .btn-primary:hover { background-color: #ff0000; border-color: #ff0000;box-shadow: 3px 3px 8px #2624248d; }
-		.box {  position: relative; width: 880px; height: 470px; overflow: hidden; }
+		.box {  position: relative; width: 880px; height: 450px; overflow: hidden; }
 		
 		.logo { position: absolute;margin: 0 auto;display: flex;flex-direction: column;align-items: center;justify-content: center;max-width: 300px;text-align: center;margin-top: 170px;padding: 10px;z-index: 1; }
 		a.logo { text-decoration: none; }
@@ -50,6 +50,7 @@
 		
 		.course { font-family: "Oswald", sans-serif; font-optical-sizing: auto; position: absolute; font-size: 3rem; font-weight: bold; text-align: center;}
 		.course a { text-decoration: none; }
+		.course a:hover { color: #ffff00 !important; }
 		
         .mba { top: 0; left:0; }
         .course.mba a { color: #ffffff;position: relative;top: 12px;left: 65px; }
@@ -115,11 +116,19 @@
 	
 	<div class="wrapper">
         <div class="container">
-            <div class="row d-flex justify-content-center mb-2 mt-1">
-                <div class="col d-flex justify-content-between header-box p-2 p-lg-0">
-                    <h5 class="title mb-5 mb-lg-3 pulse-text">Admissions Open A.Y : 2025-26</h5> 
-					<div class="header-btn">
+            <div class="row d-flex justify-content-center mb-0 mb-lg-4">
+                <div class="col d-flex flex-column flex-lg-row justify-content-between align-items-center header-box p-2 p-lg-0">
+                    <div class="d-none d-lg-block">
+						<h5 class="title">Click on the course to get more info</h5>
+					</div>
+                    <div>
+						<h5 class="title mb-3 mb-lg-0 pulse-text">Admissions Open A.Y : 2025-26</h5>
+					</div>
+					<div class="header-btn mb-4 mb-lg-0">
 						<a href="#" class="btn btn-primary fw-bold">Apply Now</a>
+					</div>
+					<div class="d-block d-lg-none">
+						<h5 class="title">Click on the course to get more info</h5>
 					</div>
                 </div>
             </div>
